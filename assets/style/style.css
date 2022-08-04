@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+
+html,
+body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: 'Cabin', sans-serif;
+    color: #131313;
+    box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #DB202C; 
+    border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #d8207c; 
+}
+
+a h3:hover {
+    color: #DB202C;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    min-width: 950px;
+    min-height: 100%;
+    background-color: #efefef;
+    color: #141414;
+}
+
+.signInContainer{
+    background-color: #efefee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.column{
+    background-color: #ffffff;
+    min-height: 300px;
+    max-height: 100%;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+    padding: 20px 35px;
+    overflow-y: auto;
+}
+
+.column form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="password"] {
+    font-size: 14px;
+    margin: 10px 0;     
+    border: none;
+    border-bottom: 1px solid #dedede;  
+    outline: none;
+}
+
+.column form input[type="submit"] {
+    background-color: #DB202C;
+    /*#4285f4*/
+    color: #ffffff;
+    height: 36px;
+    width: 88px;
+    border: none;
+    border-radius: 3px;
+    font-weight:500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.column .header {
+    padding: 20px 0;
+}
+
+.column h3 {
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0;
+    padding-top: 16px;
+    color: #000000;
+}
+
+.column .header span {
+    font-size: 14px;
+}
+
+.column .header img{
+    width: 200px;
+}
+
+.signInMessage{
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.errorMessage {
+    color: #f00000;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #eed3d7;
+    background-color: #f2dede;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+    padding: 10px;
+}
+
+.previewImage,
+.previewVideo {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover; 
+}
+
+.previewContainer {
+    position: relative;
+    display: flex;
+}
+
+.previewContainer.small {
+     width: 230px;
+     height: 129px;
+     margin-right: 4px;
+     display: inline-flex;
+}
+
+.previewContainer.small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.previewOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.previewOverlay .mainDetails h3 {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 5px 0;
+    font-family: 'Cabin', sans-serif;
+}
+
+.previewOverlay .mainDetails h4 {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 15px 0;
+    font-family: 'Cabin', sans-serif;
+}
+
+.previewOverlay .mainDetails {
+    position: relative;
+    top: 35%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainDetails button {
+    background-color: rgba(255, 38, 38, 0.4);
+    color: #ffffff;
+    border: none;
+    min-width: 150px;
+    padding: 0 38px;
+    height: 50px;
+    max-height: 50px;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button i {
+    color: inherit;
+}
+
+.mainDetails button:hover {
+    background-color: #e6e6e6;
+    color: #000000;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.entities,
+.videos {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.entities::-webkit-scrollbar,
+.videos::-webkit-scrollbar {
+    display: none;
+}
+
+.previewCategories {
+    padding: 0 50px;
+}
+
+.errorBanner {
+    color: #141414;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.season {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+}
+
+.episodeContainer {
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.episodeContainer .contents {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    position: relative;
+}
+
+.episodeContainer img {
+    width: 230px;
+    height: 129px;
+    object-fit: cover;
+}
+
+.episodeContainer .videoInfo h4,
+.episodeContainer .videoInfo span {
+    color: #141414;
+    width: 100%;
+    white-space: normal;
+}
+
+.episodeContainer .videoInfo {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.previewCategories.noScroll .category .entities {
+    white-space: normal;
+}
+
+.watchContainer video {
+    width: 100%;
+}
+
+.videoControls {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    text-shadow: 2px 2px 3px #141414;
+    background:  linear-gradient(to bottom, #141414, #14141400);
+}
+
+.videoControls h1 {
+    color: #e6e6e6;
+}
+
+.videoControls button {
+    text-shadow: 2px 2px 3px #141414;
+    font-size: 50px;
+    padding: 50px;
+    color: #e6e6e6;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.upNext {
+    height: 100%;
+    justify-content: center;
+}
+
+.upNextContainer button {
+    padding: 0;
+}
+
+.upNextContainer h2,
+.upNextContainer h3 {
+    color: #e6e6e6;
+}
+
+.watchNav {
+    z-index: 2;
+}
+
+.seen {
+    color: #2ecc71;
+    font-size: 26px;
+    position: absolute;
+    top: 0;
+    right: 0%;
+}
+
+.previewCategories h1 {
+    color: #141414;
+    font-size: 20px;
+    margin-top: 50px
+}
+
+.previewCategories h1 span {
+    font-size: 20px;
+    color: #3f3838;
+    font-weight: 400;
+}
+
+.settingsContainer {
+    padding-top: 60px;
+    background-color: transparent;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.settingsContainer h2 {
+    color: #141414;
+    margin-top: 0;
+}
+
+.settingsContainer .formSection {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    border-bottom: 1px solid #ff5858;
+    padding: 20px;
+}
+
+.settingsContainer form input[type="text"],
+.settingsContainer form input[type="email"],
+.settingsContainer form input[type="password"] {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid #ffb3b3;
+    padding: 0 5px;
+    background: linear-gradient(to top, #ffe3e3, transparent);
+    outline: none;
+}
+
+.settingsContainer form input[type="submit"] {
+    background-color: #dc1928;
+    width: 25%;
+    height: 40px;
+}
+
+.alertSuccess,
+.alertError {
+    margin: 0;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 50%;
+    box-shadow: 0 1px 3px #14141466;
+    text-align: center;
+}
+
+.alertError {
+    color: #dc1928;
+    background-color: #fad3d6;
+    text-shadow: 0 1px 1px #14141466;
+}
+
+.alertSuccess {
+    color: #00af49;
+    background-color: #cffde2;
+    text-shadow: 0 1px 1px #14141466;
+}
+
+.alertSuccess .fas {
+    color: #00af49;
+    margin-right: 10px;
+    text-shadow: 0 1px 1px #14141466;
+}
+
+.alertError .fas {
+    color: #dc1928;
+    margin-right: 10px;
+    text-shadow: 0 1px 1px #14141466;
+}
+
+.subscribe {
+    color: #0654ba;
+}
+
+.formSection h3 {
+    padding: 0;
+    color: #141414;
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+}
